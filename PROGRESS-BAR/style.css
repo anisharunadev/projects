@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    font-family: 'Muli',sans-serif;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    background-color: aliceblue;
+}
+
+.container {
+    text-align: center;
+}
+
+.progress-container {
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    margin-bottom: 50px;
+    max-width: 100%;
+    position: relative;
+}
+
+.progress-container::before {
+    content: "";
+    background-color: #999;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 100%;
+    z-index: -1;
+}
+
+.progress {
+    background-color: royalblue;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 5px;
+    width: 0;
+    z-index: -1;
+    transition: 0.7s ease;
+}
+
+.circle {
+    background: #fff;
+    color: #999;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid #999;
+    transition: 0.7s ease;
+}
+
+.circle.active {
+    border-color: royalblue;
+}
+
+.card {
+    width: auto;
+    background-color: #fff;
+    padding: 5px;
+    margin-bottom: 80px ;
+    border-radius: 8px;
+    color: #999;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.card h3 {
+    transition: opacity 0.3s ease-in 0.4s ;
+}
+
+button {
+    border: 0;
+    text-transform: capitalize;
+    padding: 8px 30px;
+    margin: 12px;
+    background-color: royalblue;
+    color: #FFF;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+button:disabled {
+    background-color: #999;
+    cursor:not-allowed;
+}
+
+button:focus {
+    outline: 0;
+}
+
+button:active {
+    transform: scale(1.1);
+}
+
+@media (max-width: 550px) {
+    .progress-container {
+        width: 350px
+    }
+    .progress-container::before {
+        height: 3px;
+    }
+
+    .circle {
+        border: 3px solid #999;
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 400px) {
+    .progress-container {
+        width: 250px
+    }
+
+    .progress-container::before {
+        height: 2px;
+    }
+
+    .circle {
+        border: 2px solid #999;
+        width: 25px;
+        height: 25px;
+    }
+} 
+
