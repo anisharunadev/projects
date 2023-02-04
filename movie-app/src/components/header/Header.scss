@@ -1,0 +1,49 @@
+.movie__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding: 10px;
+    color:white;
+    position: sticky;
+    margin: 0 40px;
+    gap: 20px;
+}
+
+header {
+    width: 100%;
+    background-color: black;
+}
+
+input[type=search] {
+    padding: 10px;
+    background-color: transparent;
+    color: white;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 0 1em greenyellow;
+}
+
+input[type=submit] {
+    padding: 10px;
+    border-radius: 10px;
+    color: gray;
+    background-color: transparent;
+    box-shadow: 0 0 1em greenyellow;
+}
+input[type=submit]:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 2em greenyellow;
+}
+
+.nav__right > form {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav__left {
+    text-transform: uppercase;
+    font-size: 22px;
+    background-color: transparent;
+}

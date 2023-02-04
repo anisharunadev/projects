@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+    .heroButton {
+        @apply  p-3 md:p-8 text-xs tracking-widest text-gray-400 uppercase outline-none cursor-pointer border border-[rgb(36,36,36)] rounded-full hover:text-white transition-all hover:border-yellow-400
+    }
+
+    .resume-headline {
+        @apply  uppercase text-3xl font-bold pb-2
+    }
+
+    .resume-hr {
+        @apply  bg-yellow-400 h-1 mb-3
+    }
+
+    .resume-flex-icon {
+        @apply flex items-center gap-3
+    }
+
+    .resume-list {
+        @apply list-disc list-inside p-3 leading-loose font-semibold
+    }
+}
+
+svg {
+    display: inline-block;
+}
+
